@@ -9,6 +9,8 @@
 		<meta property="og:image" content="images/metaimage.png">
 		<link rel="icon" href="images/favicon.png">
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet"
+			href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -19,23 +21,195 @@
 				<!-- Wrapper -->
 					<div id="wrapper">
 
-						<!-- Panel (Banner) -->
-							<section class="panel banner right">
+						<!-- <div class=navbar-container> -->
+							<nav id="navbar">
+								<ul class="actions">
+									<li><a href="#home" class="button">Home</a></li>
+									<li><a href="#about" class="button">About Me</a></li>
+									<li><a href="#skills" class="button">Skills</a></li>
+									<li><a href="#portfolio" class="button">Portfolio</a></li>
+									<li><a href="#contact" class="button">Contact</a></li>
+								</ul>
+							</nav>
+						<!-- </div> -->
+
+						<!-- Panel (Home) -->
+							<section class="panel banner right" id="home">
 								<div class="content color0 span-3-75">
-									<h1 class="major">Hello, my name<br />is Jaehyuk Lee.</h1>
+									<h1 class="major">Hello, my name<br>is Jaehyuk Lee.</h1>
 									<p>I'm a software engineer based in San Francisco.</p>
-									<ul class="actions">
+									<ul class="icons">
 										<li><a href="https://github.com/jhlumd" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 										<li><a href="https://www.linkedin.com/in/jaehyuk-lee-a5277425" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 										<li><a href="https://angel.co/jaehyuk-lee-1" class="icon brands fa-angellist"><span class="label">AngelList</span></a></li>
-										<li><a href="assets/Jaehyuk_Lee_Resume.pdf" class="button small">Resume</a></li>
+										<li><a href="mailto:jhlumd@gmail.com" target="_blank" class="icon regular fa-envelope"><span class="label">Email</span></a></li>
 									</ul>
 									<ul class="actions">
-										<li><a href="#about" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
+										<li><a href="assets/Jaehyuk_Lee_Resume.pdf" target="_blank" class="button small">Résumé</a></li>
+									</ul>
+									<ul class="actions next-button">
+										<li><a href="#about" class="button primary color2 circle icon solid fa-angle-right">Next</a></li>
 									</ul>
 								</div>
-								<div class="image filtered span-1-75" data-position="0% 0%">
-									<img src="images/pic01.jpg" alt="main photo" />
+								<div class="image filtered span-1-75" data-position="top">
+									<img src="images/pic01.jpg" alt="me" />
+								</div>
+							</section>
+
+						<!-- Panel (About) -->
+							<section class="panel spotlight medium left" id="about">
+								<div class="content span-7">
+									<h2 class="major">About Me</h2>
+									<p>I'm interested in writing what the user interacts with and making sure they have a wonderful experience getting to
+									the things they need. I love learning a concept and understanding how it fits together in the larger picture. I’m always up for a challenge
+									and get excited about learning new tools to do what I do better.</p>
+									<p>Having a project management background, I excel in data-driven problem solving and facilitating collaboration. I
+									enjoy working with others to produce a better outcome and have demonstrated excellent interpersonal and communication
+									skills in my roles.</p>
+									<p>Beyond code, I like to play the guitar and listen to NBA podcasts.</p>
+								</div>
+								<div class="image filtered tinted" data-position="bottom right">
+									<img src="images/pic02.jpg" alt="guitar" style="filter:blur(3px)" />
+								</div>
+							</section>
+
+						<!-- Panel (Skills) -->
+							<section class="panel color1" id="skills">
+								<div class="intro joined">
+									<h2 class="major">Skills</h2>
+									<br>
+									<ul class="alt">
+										<li>JavaScript, React, Node.js, Express,</li>
+										<li>Ruby, Rails, PostgreSQL, MongoDB,</li>
+										<li>AWS, Git, jQuery, webpack,</li>
+										<li>HTML5, CSS3</li>
+									</ul>
+								</div>
+								<div class="inner">
+									<ul class="grid-icons four connected">
+										<li><i class="devicon-javascript-plain"></i></li>
+										<li><i class="devicon-react-original-wordmark"></i></li>
+										<li><i class="devicon-nodejs-plain-wordmark"></i></li>
+										<li><i class="devicon-express-original-wordmark"></i></li>
+										<li><i class="devicon-ruby-plain-wordmark"></i></li>
+										<li><i class="devicon-rails-plain-wordmark"></i></li>
+										<li><i class="devicon-postgresql-plain-wordmark"></i></li>
+										<li><i class="devicon-mongodb-plain-wordmark"></i></li>
+										<li><i class="devicon-amazonwebservices-plain-wordmark"></i></li>
+										<li><i class="devicon-git-plain-wordmark"></i></li>
+										<li><i class="devicon-jquery-plain-wordmark"></i></li>
+										<li><i class="devicon-webpack-plain-wordmark"></i></li>
+										<li><i class="devicon-html5-plain-wordmark"></i></li>
+										<li><i class="devicon-css3-plain-wordmark"></i></li>
+									</ul>
+								</div>
+							</section>
+
+						<!-- Panel (Portfolio) -->
+							<section class="panel spotlight small left" id="portfolio">
+								<div class="content span-5 f-start">
+									<h2 class="major">Portfolio</h2>
+									<ul class="contact-icons color1">
+										<li class="icon regular fa-folder-open"><a href="#soricloud"><em>SoriCloud</em></a></li>
+										<li class="icon regular fa-folder-open"><a href="#museic"><em>Museic</em></a></li>
+									</ul>
+								</div>
+								<div class="image filtered tinted" data-position="bottom">
+									<img src="images/pic03.jpg" alt="building" />
+								</div>
+							</section>
+
+						<!-- Panel (SoriCloud) -->
+							<section class="panel" id="soricloud">
+								<div class="intro color2">
+									<p>
+										<a href="https://soricloud.herokuapp.com"><b>SoriCloud</b></a> (
+										<a href="https://soricloud.herokuapp.com"><em>live</em></a> |
+										<a href="https://github.com/jhlumd/SoriCloud#readme"><em>github</em></a> )
+										is a SoundCloud clone built with React/Redux, Rails, PostgreSQL, and AWS S3.</p>
+									<p>I focused on demonstrating my proficiency with React and Redux by creating a fluid and responsive interface for
+										audio playback and site navigation.</p>
+									<p>Under the hood, I designed RESTful APIs and optimized the backend by avoiding N+1 queries to allow for scale.</p>
+								</div>
+								<div class="gallery">
+									<div class="group span-4-5">
+										<a href="images/gallery/sori/gif_signup_big.gif" class="image filtered span-3" data-position="top"><img
+												src="images/gallery/sori/sori_splash.png" alt="sori_signup" /></a>
+										<a href="images/gallery/sori/sori_tswift_song.png" class="image filtered span-1-5" data-position="top"><img
+												src="images/gallery/sori/trouble.png" alt="trouble cover" /></a>
+										<a href="images/gallery/sori/sori_rock_artist.png" class="image filtered span-1-5" data-position="top"><img
+												src="images/gallery/sori/Slither.jpg" alt="slither cover" /></a>
+										<a href="images/gallery/sori/gif_tswift_big.gif" class="image filtered span-3" data-position="top"><img
+												src="images/gallery/sori/gif_tswift_big.gif" alt="soricloud demo" /></a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Panel (Museic) -->
+							<section class="panel" id="museic">
+								<div class="intro color2-alt">
+									<p>
+										<a href="https://museic-demo.herokuapp.com"><b>Museic</b></a> (
+										<a href="https://museic-demo.herokuapp.com"><em>live</em></a> |
+										<a href="https://github.com/jhlumd/museic#readme"><em>github</em></a> )
+										is a social platform with a unique UI to record and share short melodies. It showcases my ability on an entirely
+										JavaScript <em>MERN</em> stack (MongoDB, Express, React, and Node.js).</p>
+									<p>It features a dynamic interface for recording melodies as well as a beautiful real-time visualization of a melody
+										as it is played to enhance user engagement. User input is saved directly into the database as an array of music
+										notes to eliminate the need for audio file data storage.</p>
+								</div>
+								<div class="gallery">
+									<div class="group span-4-5">
+										<a href="images/gallery/muse/gif_splash.gif" class="image filtered span-3" data-position="top"><img
+												src="images/gallery/muse/gif_splash.gif" alt="muse_splash" /></a>
+										<a href="images/gallery/muse/gif_user.gif" class="image filtered span-1-5" data-position="center"><img
+												src="images/gallery/muse/museic_splash.png" alt="muse_user" /></a>
+										<a href="images/gallery/muse/gif_music.gif" class="image filtered span-1-5" data-position="center"><img
+												src="images/gallery/muse/museic_create.png" alt="muse_create" /></a>
+										<a href="images/gallery/muse/gif_index.gif" class="image filtered span-3" data-position="bottom"><img
+												src="images/gallery/muse/museic_index.png" alt="muse_index" /></a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Panel (Contact) -->
+							<section class="panel color4-alt" id="contact">
+								<div class="inner columns divided">
+									<div class="span-1-5">
+										<h2 class="major">Contact</h2>
+										<ul class="contact-icons color1">
+											<li class="icon regular fa-envelope"><a href="mailto:jhlumd@gmail.com">jhlumd@gmail.com</a></li>
+											<li class="icon solid fa-phone">(818) 636-4773</li>
+											<li class="icon regular fa-file"><a href="assets/Jaehyuk_Lee_Resume.pdf">View my résumé</a></li>
+											<li class="icon brands fa-github"><a href="https://github.com/jhlumd">GitHub</a></li>
+											<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/jaehyuk-lee-a5277425">LinkedIn</a></li>
+											<li class="icon brands fa-angellist"><a href="https://angel.co/jaehyuk-lee-1">AngelList</a></li>
+										</ul>
+									</div>
+									<div class="span-3-25">
+										<form name="contact-form">
+											<div class="fields">
+												<div class="field half">
+													<!-- <label for="name">Name</label> -->
+													<input type="text" name="name" id="name" placeholder="Your name" />
+												</div>
+												<div class="field half">
+													<!-- <label for="email">Email</label> -->
+													<input type="email" name="email" id="email" placeholder="Your email address" required />
+												</div>
+												<div class="field">
+													<!-- <label for="message">Message</label> -->
+													<textarea name="message" id="message" rows="4" placeholder="Leave me a message" required></textarea>
+												</div>
+											</div>
+											<ul class="actions">
+												<li><input type="submit" value="Send Message" class="button primary color4" /></li>
+											</ul>
+										</form>
+									</div>
+									<ul class="actions next-button">
+										<li><a href="#home" class="button primary color4 circle icon solid fa-angle-left">Home</a></li>
+									</ul>
 								</div>
 							</section>
 
@@ -51,6 +225,7 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/submit_form.js"></script>
 
 	</body>
 </html>
