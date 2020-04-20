@@ -328,7 +328,7 @@
 
 			})();
 
-	// Scroll zones. // fixme: add scrollZone icon or styling
+	// Scroll zones.
 		if (settings.scrollZones.enabled)
 			(function() {
 

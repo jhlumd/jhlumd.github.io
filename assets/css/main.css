@@ -3651,8 +3651,24 @@ input, select, textarea {
 				left: 0;
 			}
 
+			#wrapper > .scrollZone.left:hover {
+				background-image: url("../../images/chevron-left-solid.svg"), linear-gradient(to left, rgba(255, 228, 180, 0), rgba(255, 228, 180, 0.7));
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				opacity: 0.3;
+			}
+
 			#wrapper > .scrollZone.right {
 				right: 0;
+			}
+
+			#wrapper > .scrollZone.right:hover {
+				background-image: url("../../images/chevron-right-solid.svg"), linear-gradient(to right, rgba(255, 228, 180, 0), rgba(255, 228, 180, 0.7));
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				opacity: 0.3;
 			}
 
 		#wrapper > .copyright {
