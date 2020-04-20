@@ -1372,10 +1372,10 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			ul.grid-icons {
-				-moz-justify-content: -moz-flex-start;
+				/* -moz-justify-content: -moz-flex-start;
 				-webkit-justify-content: -webkit-flex-start;
 				-ms-justify-content: -ms-flex-start;
-				justify-content: flex-start;
+				justify-content: flex-start; */
 				width: 100% !important;
 				margin: -1rem 0 1.5rem -1rem;
 			}
