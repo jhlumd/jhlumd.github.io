@@ -1,1 +1,1 @@
-Personal portfolio site at jaehyuk-lee.com [I'm an inline-style link](https://www.google.com)
+Personal portfolio site at [jaehyuk-lee.com](https://jaehyuk-lee.com)
