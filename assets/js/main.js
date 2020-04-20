@@ -328,7 +328,7 @@
 
 			})();
 
-	// Scroll zones.
+	// Scroll zones. // fixme: add scrollZone icon or styling
 		if (settings.scrollZones.enabled)
 			(function() {
 
@@ -751,3 +751,60 @@
 					});
 
 })(jQuery);
+
+// Contact Form
+
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbxTcK-uHgVqrLRixCrRoK9PzYcPzIElsjTfF77EdlaPSjvHolE/exec";
+const contactForm = document.forms["contact-form"];
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(contactForm) })
+    .then(() => {
+      contactForm.reset();
+      alert("Message sent sucessfully!");
+    })
+    .catch((err) => {
+      console.error("Error!", err.message);
+      alert("Message was unable to be sent.");
+    });
+});
+
+// Copy to clipboard tooltip
+
+function copyToClipboard(sect) {
+  const el = document.createElement("textarea");
+  el.value = "jhlumd@gmail.com";
+  el.setAttribute("readonly", "");
+  el.style.position = "absolute";
+  el.style.left = "-9999px";
+  document.body.appendChild(el);
+  const selected =
+    document.getSelection().rangeCount > 0
+      ? document.getSelection().getRangeAt(0)
+      : false;
+  el.select();
+  el.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(el);
+  if (selected) {
+    document.getSelection().removeAllRanges();
+    document.getSelection().addRange(selected);
+  }
+
+	const tooltip = document.getElementById(sect + "tip");
+	tooltip.classList.add("tipclicked");
+  tooltip.innerHTML = "Successfully copied to clipboard";
+}
+
+function outHome() {
+	const tooltip = document.getElementById("hometip");
+	tooltip.classList.remove("tipclicked");
+  tooltip.innerHTML = "Click to copy to clipboard";
+}
+
+function outContact() {
+  const tooltip = document.getElementById("contacttip");
+  tooltip.innerHTML = "Copy email address to clipboard";
+}

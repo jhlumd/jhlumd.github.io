@@ -42,7 +42,13 @@
 										<li><a href="https://github.com/jhlumd" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 										<li><a href="https://www.linkedin.com/in/jaehyuk-lee-a5277425" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 										<li><a href="https://angel.co/jaehyuk-lee-1" target="_blank" class="icon brands fa-angellist"><span class="label">AngelList</span></a></li>
-										<li><a href="mailto:jhlumd@gmail.com" target="_blank" class="icon regular fa-envelope"><span class="label">Email</span></a></li>
+										<li class="email-hover">
+											<a href="mailto:jhlumd@gmail.com" target="_blank" class="icon regular fa-envelope"><span class="label">Email</span></a>&nbsp;
+											<span class="tooltip homeemail" onclick="copyToClipboard('home')" onmouseout="outHome()">
+												<span class="tooltiptext hometooltiptext" id="hometip">Click to copy to clipboard</span>
+												<span class="homeemailfont">jhlumd@gmail.com</span>
+											</span>
+										</li>
 									</ul>
 									<ul class="actions">
 										<li><a href="assets/Jaehyuk_Lee_Resume.pdf" target="_blank" class="button small">Résumé</a></li>
@@ -172,13 +178,19 @@
 								</div>
 							</section>
 
-						<!-- Panel (Contact) fixme: onclick copy phone number or email address? -->
+						<!-- Panel (Contact) -->
 							<section class="panel color4-alt" id="contact">
 								<div class="inner columns divided">
 									<div class="span-1-5">
 										<h2 class="major">Contact</h2>
 										<ul class="contact-icons color1">
-											<li class="icon regular fa-envelope"><a href="mailto:jhlumd@gmail.com" target="_blank">jhlumd@gmail.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-copy"></i></li>
+											<li class="icon regular fa-envelope email-hover">
+												<a href="mailto:jhlumd@gmail.com" target="_blank">jhlumd@gmail.com</a>&nbsp;&nbsp;
+												<span class="tooltip" onclick="copyToClipboard('contact')" onmouseout="outContact()">
+													<span class="tooltiptext" id="contacttip">Copy email address to clipboard</span>
+													<i class="far fa-copy"></i>
+												</span>
+											</li>
 											<li class="icon solid fa-phone"><a href="tel:+1-818-636-4773">(818) 636-4773</a></li>
 											<li class="icon regular fa-file"><a href="assets/Jaehyuk_Lee_Resume.pdf" target="_blank">View my résumé</a></li>
 											<li class="icon brands fa-github"><a href="https://github.com/jhlumd" target="_blank">GitHub</a></li>
@@ -225,7 +237,6 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/submit_form.js"></script>
 
 	</body>
 </html>
