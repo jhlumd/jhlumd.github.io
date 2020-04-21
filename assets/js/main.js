@@ -808,3 +808,20 @@ function outContact() {
   const tooltip = document.getElementById("contacttip");
   tooltip.innerHTML = "Copy email address to clipboard";
 }
+
+// Navbar toggle to small
+
+const navButtons = Array.from(
+  document.getElementById("navbar").getElementsByClassName("button")
+);
+if (window.innerWidth < 640) {
+  navButtons.forEach((but) => but.classList.add("small"));
+}
+
+window.addEventListener("resize", () => {
+	if (window.innerWidth < 640) {
+    navButtons.forEach((but) => but.classList.add("small"));
+	} else {
+		navButtons.forEach((but) => but.classList.remove("small"));
+	}
+});

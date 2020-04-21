@@ -3769,32 +3769,117 @@ input, select, textarea {
 
 /* Navbar */
 
-	#navbar {
+	.nav-container {
 		position: fixed;
-		top: 2.5rem;
+		top: 0;
+		left: 0;
+		height: 20vh;
+		width: 100%;
 		z-index: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	/* #navbar { 
+	/* #e37b7c #353865 */
+	#navbar {
+		display: flex;
+		align-items: center;
+		margin: 0 0 0 0;
+		height: 4rem;
+		-moz-transform: translateY(-100%);
+		-webkit-transform: translateY(-100%);
+		-ms-transform: translateY(-100%);
 		transform: translateY(-100%);
+		-moz-transition: -moz-transform 0.5s ease-in-out;
+		-webkit-transition: -webkit-transform 0.5s ease-in-out;
+		-ms-transition: -ms-transform 0.5s ease-in-out;
+		transition: transform 0.5s ease-in-out;
+	}
+
+	#navbar li:last-child {
+		padding-right: 0.75rem;
+	}
+
+	#navbar li a {
+		/* background-size: auto;
+		box-shadow: 0.5rem 0.5rem 0.5rem 0px rgba(100, 100, 100, 0.7); */
+		
+		opacity: 0.8;
+
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		filter: drop-shadow(10px 10px 2px rgba(100,100,100,0.7));
+	}
+
+	#navbar li:nth-child(1) a {
+		/* background-image: linear-gradient(45deg, #726193 20%, #e37b7c 60%, #ffe4b4); */
+
+		background-image: url("../../images/nav1.png");
+	}
+
+	#navbar li:nth-child(2) a {
+		/* background-image: url(../../images/pic02a.jpg);
+		background-size: contain; */
+
+		background-image: url("../../images/nav2.png");
+	}
+
+	#navbar li:nth-child(3) a {
+		/* background-image: linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+		background-color: #726193; */
+
+		background-image: url("../../images/nav3.png");
+	}
+
+	#navbar li:nth-child(4) a {
+		/* background-image: linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+		background-color: #e37b7c; */
+
+		background-image: url("../../images/nav2.png");
+	}
+
+	#navbar li:nth-child(5) a {
+		/* background-image: linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+		background-color: #353865; */
+
+		background-image: url("../../images/nav3.png");
 	}
 
 	.nav-container:hover #navbar {
+		-moz-transform: translateY(0);
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
 		transform: translateY(0);
-	} */
+	}
 
 	/* 480px 360px (min-aspect-ratio: 16 / 10) */
 	@media screen and (max-width: 736px) {
 
-		#navbar {
-			/* fixme: add hover over effect */
-			display: none;
-			/* align-items: center; */
+		.nav-container {
+			height: 5rem;
 		}
 
 		ul.actions.next-button {
 			right: 4rem;
 			bottom: 0rem;
+		}
+
+	}
+
+	@media screen and (max-width: 640) {
+
+		.nav-container {
+			height: 4rem;
+		}
+
+	}
+
+	@media screen and (max-width: 480px) {
+
+		.nav-container {
+			display: none;
 		}
 
 	}
@@ -3807,7 +3892,10 @@ input, select, textarea {
 		cursor: pointer;
 		visibility: hidden;
 		opacity: 0;
-		transition: opacity 0.3s;
+		-moz-transition: opacity 0.3s ease-in-out;
+		-webkit-transition: opacity 0.3s ease-in-out;
+		-ms-transition: opacity 0.3s ease-in-out;
+		transition: opacity 0.3s ease-in-out;
 	}
 
 	.email-hover:hover .tooltip {
@@ -3830,7 +3918,10 @@ input, select, textarea {
 		left: 50%;
 		margin-left: -5.5rem;
 		opacity: 0;
-		transition: opacity 0.5s;
+		-moz-transition: opacity 0.5s ease-in-out;
+		-webkit-transition: opacity 0.5s ease-in-out;
+		-ms-transition: opacity 0.5s ease-in-out;
+		transition: opacity 0.5s ease-in-out;
 	}
 
 	.tooltip .tooltiptext.hometooltiptext {
