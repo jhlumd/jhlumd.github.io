@@ -3855,14 +3855,14 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		.nav-container {
-			height: 5rem;
+			height: 4rem;
 		}
 
 		#navbar {
-			-moz-transform: translateY(-3rem);
-			-webkit-transform: translateY(-3rem);
-			-ms-transform: translateY(-3rem);
-			transform: translateY(-3rem);
+			-moz-transform: translateY(-2.4rem);
+			-webkit-transform: translateY(-2.4rem);
+			-ms-transform: translateY(-2.4rem);
+			transform: translateY(-2.4rem);
 		}
 
 		ul.actions.next-button {
@@ -3875,23 +3875,37 @@ input, select, textarea {
 	@media screen and (max-width: 640) {
 
 		.nav-container {
-			height: 4rem;
+			height: 3rem;
 		}
 
 		#navbar {
 			height: 3rem;
-			-moz-transform: translateY(-2.25rem);
-			-webkit-transform: translateY(-2.25rem);
-			-ms-transform: translateY(-2.25rem);
-			transform: translateY(-2.25rem);
+			-moz-transform: translateY(-1.5rem);
+			-webkit-transform: translateY(-1.5rem);
+			-ms-transform: translateY(-1.5rem);
+			transform: translateY(-1.5rem);
 		}
 
+	}
+
+/* Mobile Navbar */
+
+	.mobile-nav-container {
+		display: none;
 	}
 
 	@media screen and (max-width: 480px) {
 
 		.nav-container {
 			display: none;
+		}
+
+		.mobile-nav-container {
+			display: flex;
+			position: fixed;
+			z-index: 2;
+			top: 0;
+			left: 0;
 		}
 
 	}
