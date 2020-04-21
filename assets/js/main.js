@@ -757,17 +757,38 @@
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxTcK-uHgVqrLRixCrRoK9PzYcPzIElsjTfF77EdlaPSjvHolE/exec";
 const contactForm = document.forms["contact-form"];
+const sendButton = document.getElementById("send");
+
+function sendCycle() {
+	if (sendButton.value.indexOf("...") > 0) {
+		sendButton.value = "Sending";
+	} else {
+		sendButton.value += ".";
+	}
+}
 
 contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+	e.preventDefault();
+  sendButton.value = "Sending";
+  const sendingInt = setInterval(sendCycle, 400);
   fetch(scriptURL, { method: "POST", body: new FormData(contactForm) })
     .then(() => {
+      sendButton.value = "Message sent!";
+      clearInterval(sendingInt);
+      setTimeout(function () {
+        sendButton.value = "Send Message";
+      }, 2000);
       contactForm.reset();
-      alert("Message sent sucessfully!");
+      // alert("Thanks for your message. I'll get back to you soon.");
     })
     .catch((err) => {
-      console.error("Error!", err.message);
-      alert("Message was unable to be sent.");
+      console.error("Error message: ", err.message);
+      sendButton.value = "Error. Message was not sent.";
+      clearInterval(sendingInt);
+      setTimeout(function () {
+        sendButton.value = "Try Again";
+      }, 2000);
+      // alert("Something went wrong. The message was not sent.");
     });
 });
 
