@@ -814,14 +814,30 @@ function outContact() {
 const navButtons = Array.from(
   document.getElementById("navbar").getElementsByClassName("button")
 );
-if (window.innerWidth < 640) {
+if (window.innerWidth <= 640 && window.innerWidth > 480) {
   navButtons.forEach((but) => but.classList.add("small"));
 }
 
-window.addEventListener("resize", () => {
-	if (window.innerWidth < 640) {
+window.addEventListener("resize", (e) => {
+  e.preventDefault();
+  if (window.innerWidth <= 640 && window.innerWidth > 480) {
     navButtons.forEach((but) => but.classList.add("small"));
+  } else {
+    navButtons.forEach((but) => but.classList.remove("small"));
+  }
+});
+
+// Mobile Navbar Toggle
+
+const mobileToggle = document.getElementById("mobile-menu");
+mobileToggle.addEventListener("click", (e) => {
+	e.preventDefault();
+	if (mobileToggle.classList.contains("fa-bars")) {
+		mobileToggle.classList.remove("fa-bars");
+		mobileToggle.classList.add("fa-times");
 	} else {
-		navButtons.forEach((but) => but.classList.remove("small"));
+		mobileToggle.classList.remove("fa-times");
+    mobileToggle.classList.add("fa-bars");
 	}
+	document.getElementById("navbar").classList.toggle("menu-open");
 });
