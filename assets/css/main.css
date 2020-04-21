@@ -3890,8 +3890,12 @@ input, select, textarea {
 
 /* Mobile Navbar */
 
-	#mobile-nav-container {
-		display: none;
+	@media screen and (min-width: 480px) {
+
+		#mobile-nav-container {
+			display: none;
+		}
+
 	}
 
 	@media screen and (max-width: 480px) {
