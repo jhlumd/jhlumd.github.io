@@ -3784,11 +3784,12 @@ input, select, textarea {
 		display: flex;
 		align-items: center;
 		margin: 0 0 0 0;
+		opacity: 0.8;
 		height: 4rem;
-		-moz-transform: translateY(-100%);
-		-webkit-transform: translateY(-100%);
-		-ms-transform: translateY(-100%);
-		transform: translateY(-100%);
+		-moz-transform: translateY(-3.7rem);
+		-webkit-transform: translateY(-3.7rem);
+		-ms-transform: translateY(-3.7rem);
+		transform: translateY(-3.7rem);
 		-moz-transition: -moz-transform 0.5s ease-in-out;
 		-webkit-transition: -webkit-transform 0.5s ease-in-out;
 		-ms-transition: -ms-transform 0.5s ease-in-out;
@@ -3802,8 +3803,6 @@ input, select, textarea {
 	#navbar li a {
 		/* background-size: auto;
 		box-shadow: 0.5rem 0.5rem 0.5rem 0px rgba(100, 100, 100, 0.7); */
-		
-		opacity: 0.8;
 
 		background-position: center;
 		background-repeat: no-repeat;
@@ -3859,6 +3858,13 @@ input, select, textarea {
 			height: 5rem;
 		}
 
+		#navbar {
+			-moz-transform: translateY(-3rem);
+			-webkit-transform: translateY(-3rem);
+			-ms-transform: translateY(-3rem);
+			transform: translateY(-3rem);
+		}
+
 		ul.actions.next-button {
 			right: 4rem;
 			bottom: 0rem;
@@ -3870,6 +3876,14 @@ input, select, textarea {
 
 		.nav-container {
 			height: 4rem;
+		}
+
+		#navbar {
+			height: 3rem;
+			-moz-transform: translateY(-2.25rem);
+			-webkit-transform: translateY(-2.25rem);
+			-ms-transform: translateY(-2.25rem);
+			transform: translateY(-2.25rem);
 		}
 
 	}
