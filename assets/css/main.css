@@ -3647,16 +3647,19 @@ input, select, textarea {
 			z-index: 10100;
 		}
 
+		#wrapper > .scrollZone:hover {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			opacity: 0.4;
+		}
+
 			#wrapper > .scrollZone.left {
 				left: 0;
 			}
 
 			#wrapper > .scrollZone.left:hover {
 				background-image: url("../../images/chevron-left-solid.svg"), linear-gradient(to left, rgba(255, 228, 180, 0), rgba(255, 228, 180, 0.7));
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
-				opacity: 0.3;
 			}
 
 			#wrapper > .scrollZone.right {
@@ -3665,10 +3668,6 @@ input, select, textarea {
 
 			#wrapper > .scrollZone.right:hover {
 				background-image: url("../../images/chevron-right-solid.svg"), linear-gradient(to right, rgba(255, 228, 180, 0), rgba(255, 228, 180, 0.7));
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
-				opacity: 0.3;
 			}
 
 		#wrapper > .copyright {
@@ -3781,7 +3780,6 @@ input, select, textarea {
 		align-items: center;
 	}
 
-	/* #e37b7c #353865 */
 	#navbar {
 		display: flex;
 		align-items: center;
