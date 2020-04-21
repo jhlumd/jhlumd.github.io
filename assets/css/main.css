@@ -3768,7 +3768,7 @@ input, select, textarea {
 
 /* Navbar */
 
-	.nav-container {
+	#nav-container {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -3844,7 +3844,7 @@ input, select, textarea {
 		background-image: url("../../images/nav3.png");
 	}
 
-	.nav-container:hover #navbar {
+	#nav-container:hover #navbar {
 		-moz-transform: translateY(0);
 		-webkit-transform: translateY(0);
 		-ms-transform: translateY(0);
@@ -3854,7 +3854,7 @@ input, select, textarea {
 	/* 480px 360px (min-aspect-ratio: 16 / 10) */
 	@media screen and (max-width: 736px) {
 
-		.nav-container {
+		#nav-container {
 			height: 4rem;
 		}
 
@@ -3874,7 +3874,7 @@ input, select, textarea {
 
 	@media screen and (max-width: 640) {
 
-		.nav-container {
+		#nav-container {
 			height: 3rem;
 		}
 
@@ -3890,17 +3890,17 @@ input, select, textarea {
 
 /* Mobile Navbar */
 
-	.mobile-nav-container {
+	#mobile-nav-container {
 		display: none;
 	}
 
 	@media screen and (max-width: 480px) {
 
-		.nav-container {
+		#nav-container {
 			display: none;
 		}
 
-		.mobile-nav-container {
+		#mobile-nav-container {
 			display: flex;
 			position: fixed;
 			z-index: 2;
